@@ -1,9 +1,27 @@
 import React from "react";
 
 import { Stack } from "@mui/system";
-import { TextField } from "@mui/material";
+import {
+  TextField,
+  InputAdornment,
+  FormControl,
+  InputLabel,
+  IconButton,
+  Input,
+} from "@mui/material";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
 
 export const MuiTextField = () => {
+  const [showPassword, setShowPassword] = React.useState(false);
+
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+  const handleMouseDownPassword = (
+    event: React.MouseEvent<HTMLButtonElement>
+  ) => {
+    event.preventDefault();
+  };
   return (
     <Stack spacing={4}>
       <Stack direction="row">
@@ -22,6 +40,41 @@ export const MuiTextField = () => {
           disabled
           helperText="Do not share tour password with anyone"
         />
+        <TextField label="Read Only" inputProps={{ readOnly: true }} />
+      </Stack>
+      <Stack spacing={2} direction="row">
+        <TextField
+          label="Amount"
+          InputProps={{
+            startAdornment: <InputAdornment position="start">$</InputAdornment>,
+          }}
+        />
+        <TextField
+          label="Weight"
+          InputProps={{
+            endAdornment: <InputAdornment position="end">kg</InputAdornment>,
+          }}
+        />
+        <FormControl sx={{ m: 1, width: "25ch" }} variant="standard">
+          <InputLabel htmlFor="standard-adornment-password">
+            Password
+          </InputLabel>
+          <Input
+            id="standard-adornment-password"
+            type={showPassword ? "text" : "password"}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                >
+                  {showPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            }
+          />
+        </FormControl>
       </Stack>
     </Stack>
   );
