@@ -11,8 +11,11 @@ export const MuiTextField = () => {
         <TextField label="Name" variant="filled" />
         <TextField label="Name" variant="standard" />
       </Stack>
-      <Stack direction="row">
-        <TextField label="Small secondary" size="small" color="secondary" />
+      <Stack direction="row" spacing={2}>
+        <TextField label="Form secondary" size="small" color="secondary" />
+      </Stack>
+      <Stack direction="row" spacing={2}>
+        <TextField label="Form Input" required />
       </Stack>
     </Stack>
   );
