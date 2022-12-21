@@ -11,6 +11,9 @@ export const MuiTextField = () => {
         <TextField label="Name" variant="filled" />
         <TextField label="Name" variant="standard" />
       </Stack>
+      <Stack direction="row">
+        <TextField label="Small secondary" size="small" color="secondary" />
+      </Stack>
     </Stack>
   );
 };
