@@ -14,6 +14,7 @@ import VisibilityOff from "@mui/icons-material/VisibilityOff";
 
 export const MuiTextField = () => {
   const [showPassword, setShowPassword] = React.useState(false);
+  const [value, setValue] = React.useState("");
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -30,10 +31,19 @@ export const MuiTextField = () => {
         <TextField label="Name" variant="standard" />
       </Stack>
       <Stack direction="row" spacing={2}>
-        <TextField label="Form secondary" size="small" color="secondary" />
+        <TextField label="Small secondary" size="small" color="secondary" />
       </Stack>
       <Stack direction="row" spacing={2}>
-        <TextField label="Form Input" required />
+        <TextField
+          label="Form Input"
+          required
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          error={!value}
+          helperText={
+            !value ? "Required" : "Do not share your password witha anyone"
+          }
+        />
         <TextField
           label="Password"
           type="password"
