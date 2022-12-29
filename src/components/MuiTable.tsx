@@ -11,14 +11,14 @@ import {
 
 const MuiTable = () => {
   return (
-    <TableContainer>
-      <Table>
+    <TableContainer component={Paper} sx={{ maxHeight: "300px" }}>
+      <Table stickyHeader>
         <TableHead>
           <TableRow>
             <TableCell>Id</TableCell>
             <TableCell>First Name</TableCell>
             <TableCell>Last Name</TableCell>
-            <TableCell>Email</TableCell>
+            <TableCell align="center">Email</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -31,7 +31,7 @@ const MuiTable = () => {
               <TableCell>{row.first_name}</TableCell>
 
               <TableCell>{row.last_name}</TableCell>
-              <TableCell>{row.email}</TableCell>
+              <TableCell align="center">{row.email}</TableCell>
             </TableRow>
           ))}
         </TableBody>
