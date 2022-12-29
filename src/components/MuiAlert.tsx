@@ -1,9 +1,10 @@
 import React from "react";
 import { Stack, Alert, AlertTitle } from "@mui/material";
+import CheckIcon from "@mui/icons-material/Check";
 
 const MuiAlert = () => {
   return (
-    <Stack>
+    <Stack spacing={2}>
       <Alert severity="error">This is an error alert</Alert>
       <Alert severity="warning">This is a warning alert</Alert>
       <Alert severity="info">This is a info alert</Alert>
@@ -34,8 +35,8 @@ const MuiAlert = () => {
         <AlertTitle>Info</AlertTitle>
         This is a info alert
       </Alert>
-      <Alert variant="filled" severity="success">
-        <AlertTitle>Success</AlertTitle>
+      <Alert variant="filled" severity="success" icon={<CheckIcon />}>
+        <AlertTitle>Successg</AlertTitle>
         This a success alert
       </Alert>
     </Stack>
