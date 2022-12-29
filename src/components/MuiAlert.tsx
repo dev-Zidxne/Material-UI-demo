@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Alert, AlertTitle } from "@mui/material";
+import { Stack, Alert, AlertTitle, Button } from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
 
 const MuiAlert = () => {
@@ -23,7 +23,11 @@ const MuiAlert = () => {
         This a success alert
       </Alert>
 
-      <Alert variant="filled" severity="error">
+      <Alert
+        variant="filled"
+        severity="error"
+        onClose={() => alert("Close Alert")}
+      >
         <AlertTitle>Error</AlertTitle>
         This is an error alert
       </Alert>
@@ -35,7 +39,16 @@ const MuiAlert = () => {
         <AlertTitle>Info</AlertTitle>
         This is a info alert
       </Alert>
-      <Alert variant="filled" severity="success" icon={<CheckIcon />}>
+      <Alert
+        variant="filled"
+        severity="success"
+        icon={<CheckIcon />}
+        action={
+          <Button color="inherit" size="small">
+            Undo
+          </Button>
+        }
+      >
         <AlertTitle>Successg</AlertTitle>
         This a success alert
       </Alert>
