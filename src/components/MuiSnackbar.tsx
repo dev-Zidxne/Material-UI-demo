@@ -34,7 +34,7 @@ const MuiSnackbar = () => {
       /> */}
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
         <SnackbarAlert onClick={handleClose} severity="success">
-          Form submitted succesfully
+          Form submitted succesfgully
         </SnackbarAlert>
       </Snackbar>
     </>

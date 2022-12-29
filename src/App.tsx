@@ -2,7 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { MuiTypography } from "./components/MuiTypography";
-// import { MuiButton } from "./components/MuiButton";
+import { MuiButton } from "./components/MuiButton";
 import { MuiTextField } from "./components/MuiTextField";
 import { MuiSelect } from "./components/MuiSelect";
 import { MuiRadiobutton } from "./components/MuiRadiobutton";
@@ -28,6 +28,7 @@ import MuiTooltip from "./components/MuiTooltip";
 import MuiTable from "./components/MuiTable";
 import MuiAlert from "./components/MuiAlert";
 import MuiSnackbar from "./components/MuiSnackbar";
+import MuiDiologue from "./components/MuiDiologue";
 
 function App() {
   return (
@@ -58,7 +59,8 @@ function App() {
       {/* <MuiTooltip /> */}
       {/* <MuiTable /> */}
       {/* <MuiAlert /> */}
-      <MuiSnackbar />
+      {/* <MuiSnackbar /> */}
+      <MuiDiologue />
     </div>
   );
 }
