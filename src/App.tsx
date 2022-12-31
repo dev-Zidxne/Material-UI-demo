@@ -30,6 +30,7 @@ import MuiAlert from "./components/MuiAlert";
 import MuiSnackbar from "./components/MuiSnackbar";
 import MuiDiologue from "./components/MuiDiologue";
 import MuiProgress from "./components/MuiProgress";
+import MuiSkeleton from "./components/MuiSkeleton";
 
 function App() {
   return (
@@ -62,7 +63,8 @@ function App() {
       {/* <MuiAlert /> */}
       {/* <MuiSnackbar /> */}
       {/* <MuiDiologue /> */}
-      <MuiProgress />
+      {/* <MuiProgress /> */}
+      <MuiSkeleton />
     </div>
   );
 }
