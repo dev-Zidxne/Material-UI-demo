@@ -36,7 +36,7 @@ export const MuiTimeline = () => {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent color="text.secondary">
-          11:30 am
+          11gi:30 am
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot color="secondary" variant="outlined" />
