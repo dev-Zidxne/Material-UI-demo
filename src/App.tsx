@@ -36,6 +36,7 @@ import MuiSkeleton from "./components/MuiSkeleton";
 import { MuiLoadingButton } from "./components/MuiLoadingButton";
 import { MuiPicker } from "./components/MuiPicker";
 import { MuiDateRangePicker } from "./components/MuiDateRangePicker";
+import { MuiTabs } from "./components/MuiTabs";
 
 function App() {
   return (
@@ -75,6 +76,7 @@ function App() {
         {/* <MuiPicker /> */} /*Type errors need fix later *//* Possibly moved
         to Mui subscription service */
         {/* <MuiDateRangePicker /> */} /*Move to Mui subscription service */
+        <MuiTabs />
       </div>
     </LocalizationProvider>
   );
